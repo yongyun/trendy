@@ -7502,6 +7502,24 @@ body.loaded {
   align-items: center;
   cursor: pointer;
 }
+.navbar .lang-toggle {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: rgba(40, 40, 40, 0.4);
+  backdrop-filter: blur(6rem);
+  border: 1px solid rgba(200, 200, 200, 0.2);
+  font-size: 15px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+.navbar .lang-toggle:hover {
+  border-color: #02FFED;
+}
 .navbar .navbar-nav {
   margin-top: 10px;
   background: rgba(40, 40, 40, 0.4);
@@ -10491,6 +10509,17 @@ footer .subscribe p a {
   background: #1f1f1f;
   color: #fff;
 }
+.serv-style2 .item.main-colorbg2.bg-light,
+.serv-style2 .item.main-colorbg2.bg-light p {
+  color: #fff;
+}
+.serv-style2 .item.main-colorbg2.bg-light .cont .tags span {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+.serv-style2 .item.main-colorbg2.bg-light .cont .tags span:hover {
+  background: #fff;
+  color: #1f1f1f;
+}
 .serv-style2 .item .fit-img {
   position: relative;
 }
@@ -12269,3 +12298,120 @@ body.light footer .main-color {
   }
 }
 /* ====================== [ End Responsive ] ====================== */
+
+#heroTypewriter .hero-title-en {
+  font-size: 8vw;
+  line-height: 1;
+}
+
+/* Speaker Modal */
+.speaker-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999999;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+.speaker-modal.is-open {
+  visibility: visible;
+  opacity: 1;
+}
+.speaker-modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(10px);
+}
+.speaker-modal-panel {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  max-width: 960px;
+  max-height: 85vh;
+  margin: 7.5vh auto 0;
+  background: #1c1c1c;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  transform: translateY(30px);
+  transition: transform 0.4s ease;
+}
+.speaker-modal.is-open .speaker-modal-panel {
+  transform: translateY(0);
+}
+.speaker-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #02FFED;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.3);
+  color: #02FFED;
+  cursor: pointer;
+  z-index: 2;
+  transition: background 0.3s, color 0.3s;
+}
+.speaker-modal-close svg {
+  width: 18px;
+}
+.speaker-modal-close:hover {
+  background: #02FFED;
+  color: #1c1c1c;
+}
+.speaker-modal-photo {
+  width: 40%;
+  min-height: 320px;
+  background-position: center top;
+}
+.speaker-modal-info {
+  width: 60%;
+  padding: 60px 50px;
+  overflow-y: auto;
+}
+.speaker-modal-info p {
+  line-height: 1.8;
+}
+body.modal-open {
+  overflow: hidden;
+}
+@media (max-width: 767px) {
+  .speaker-modal-panel {
+    max-height: 90vh;
+    margin-top: 5vh;
+  }
+  .speaker-modal-photo,
+  .speaker-modal-info {
+    width: 100%;
+  }
+  .speaker-modal-photo {
+    min-height: 240px;
+  }
+  .speaker-modal-info {
+    padding: 40px 25px;
+  }
+}
+
+/* Location Card */
+.location-card {
+  display: flex;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #fff;
+  transition: background 0.3s, color 0.3s, border-color 0.3s;
+}
+.location-card:hover {
+  background: #02FFED;
+  border-color: #02FFED;
+  color: #1c1c1c;
+}
