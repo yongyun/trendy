@@ -12474,13 +12474,19 @@ body.modal-open {
 }
 
 .archive-card {
+  --card-color: #d6006f;
+  --card-color-soft: rgba(214, 0, 111, 0.18);
   position: relative;
   padding: 40px;
-  border: 1px solid #d6006f;
-  background: linear-gradient(135deg, #d6006f 0%, rgba(214, 0, 111, 0.18) 40%, #000 75%);
-  box-shadow: 0 0 45px -12px #d6006f;
+  border: 1px solid var(--card-color);
+  background: #000;
+  box-shadow: 0 0 45px -12px var(--card-color);
   margin-bottom: 40px;
   overflow: hidden;
+  transition: background 1.2s ease;
+}
+.archive-card:hover {
+  background: linear-gradient(135deg, var(--card-color) 0%, var(--card-color-soft) 40%, #000 75%);
 }
 .archive-card:before,
 .archive-card:after {
@@ -12507,6 +12513,7 @@ body.modal-open {
   color: #fff;
   line-height: 1.3;
   margin-bottom: 25px;
+  font-family: "Funnel Display", sans-serif;
 }
 .archive-card-meta {
   margin-bottom: 20px;
@@ -12522,15 +12529,6 @@ body.modal-open {
   margin-right: 10px;
   width: 14px;
   text-align: center;
-}
-.archive-card-genre {
-  display: inline-block;
-  padding: 10px 24px;
-  border: 1px solid #d6006f;
-  color: #d6006f;
-  font-size: 13px;
-  letter-spacing: 1px;
-  margin-bottom: 20px;
 }
 .archive-card-org {
   color: #d6006f;
@@ -12739,17 +12737,7 @@ body.modal-open {
 .pb-0 {
   padding-bottom: 0 !important;
 }
-.archive-card {
-  --card-color: #d6006f;
-  --card-color-soft: rgba(214, 0, 111, 0.18);
-  position: relative;
-  padding: 40px;
-  border: 1px solid var(--card-color);
-  background: linear-gradient(135deg, var(--card-color) 0%, var(--card-color-soft) 40%, #000 75%);
-  box-shadow: 0 0 45px -12px var(--card-color);
-  margin-bottom: 40px;
-  overflow: hidden;
-}
+
 .archive-card--blue {
   --card-color: #2f6fb5;
   --card-color-soft: rgba(47, 111, 181, 0.18);
@@ -12872,6 +12860,14 @@ body.modal-open {
   #archiveCards {
     grid-template-columns: 1fr;
   }
+}
+.archive-card {
+  padding-bottom: 130px;
+}
+.archive-card-footer {
+  position: absolute;
+  left: 40px;
+  bottom: 40px;
 }
 
 
