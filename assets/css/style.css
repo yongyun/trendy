@@ -12869,6 +12869,41 @@ body.modal-open {
   left: 40px;
   bottom: 40px;
 }
+/* My track單一頁面 */
+.mytrack-hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-bottom: 60px;
+            background-color: #060606;
+            background-repeat: no-repeat;
+            background-image:
+                radial-gradient(38% 32% at 4% 2%, rgba(2, 255, 237, 0.55), transparent 70%),
+                radial-gradient(28% 24% at 16% 0%, rgba(2, 255, 237, 0.35), transparent 70%),
+                radial-gradient(22% 26% at 0% 22%, rgba(2, 255, 237, 0.3), transparent 70%),
+                radial-gradient(38% 32% at 96% 98%, rgba(2, 255, 237, 0.55), transparent 70%),
+                radial-gradient(28% 24% at 84% 100%, rgba(2, 255, 237, 0.35), transparent 70%),
+                radial-gradient(22% 26% at 100% 78%, rgba(2, 255, 237, 0.3), transparent 70%);
+        }
 
+        .mytrack-content {
+            margin-top: 40px;
+        }
+
+        .mytrack-cta {
+            width: 100%;
+            padding: 14px 20px;
+            justify-content: center;
+        }
+
+        @media (min-width: 992px) {
+            .mytrack-content {
+                margin-top: 0;
+            }
+
+            .mytrack-cta {
+                width: 50%;
+            }
+        }
 
 
